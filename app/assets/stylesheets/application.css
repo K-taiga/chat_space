@@ -1,0 +1,171 @@
+/*!
+ * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
+ * http://cssreset.com
+ * Copyright 2012 Yahoo! Inc. All rights reserved.
+ * http://yuilibrary.com/license/
+ */
+/*
+    TODO will need to remove settings on HTML since we can't namespace it.
+    TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html {
+  color: #000;
+  background: #FFF; }
+
+/*
+    TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+    TODO test putting a class on HEAD.
+        - Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset,
+img {
+  border: 0; }
+
+/*
+    TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol,
+ul {
+  list-style: none; }
+
+caption,
+th {
+  text-align: left; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before,
+q:after {
+  content: ''; }
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal; }
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%; }
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000; }
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none; }
+
+.chat-side {
+  height: 100vh;
+  width: 300px;
+  float: left;
+  background-color: #2f3e51; }
+
+.chat-side__user {
+  height: 15vh;
+  width: 100%;
+  background-color: #090c10;
+  position: relative; }
+  .chat-side__user__content {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0; }
+  .chat-side__user__name {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 20px;
+    position: relative;
+    display: inline-block; }
+  .chat-side__user__new-group {
+    margin-left: 90px;
+    position: relative;
+    display: inline-block; }
+  .chat-side__user__edit-user {
+    position: relative;
+    display: inline-block; }
+
+a {
+  color: #FFFFFF; }
+  a:hover {
+    color: #38aef0; }
+
+.fa-edit:before, .fa-pencil-square-o:before {
+  content: "\f044"; }
+
+.chat-side__groups {
+  height: 85%;
+  width: 100%; }

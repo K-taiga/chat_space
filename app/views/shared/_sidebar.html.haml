@@ -1,0 +1,11 @@
+.chat-side
+  .chat-side__user
+    .chat-side__user__content
+      .chat-side__user__name
+        =@user
+      =link_to "groups/new", class: 'chat-side__user__new-group' do
+        %i.fa.fa-pencil-square-o
+      =link_to "users/edit", class: 'chat-side__user__edit-user' do
+        %i.fa.fa-cog
+
+.chat-side__groups
