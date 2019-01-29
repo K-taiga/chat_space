@@ -21,7 +21,6 @@
 
 ### Association
 - has_many :groups
-- has_many :users
 _ has_many :messages
 
 ## groupテーブル
