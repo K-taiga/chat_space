@@ -13,6 +13,7 @@
 - belongs_to :group
 - belongs_to :user
 
+
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -21,10 +22,9 @@
 |password|string|null: false|
 
 ### Association
-- has_many :groups
-- has_many :messages
 - has_many :members
-
+- has_many :groups , through: :members
+- has_many :messages
 
 
 ## groupテーブル
@@ -33,9 +33,10 @@ Column|Type|Options|
 |name|string|null: false, unique: true|
 
 #### Association
-- has_many :users
-- has_many :messages
 - has_many :members
+- has_many :users , through: :members
+- has_many :messages
+
 
 ## messageテーブル
 Column|Type|Options|
@@ -48,6 +49,4 @@ Column|Type|Options|
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-
 
