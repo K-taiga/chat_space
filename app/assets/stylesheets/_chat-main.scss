@@ -1,0 +1,36 @@
+.chat-main{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float:left;
+}
+
+.chat-main__header{
+  height: 15vh;
+  border:1px solid #eee;
+
+  &--group{
+    margin:0 40px;
+    float: left;
+
+    &--name{
+      color:$blackFont;
+      font-size: 20px;
+      margin-top: 35px;
+      margin-right: 0px;
+      margin-bottom: 15px;
+      margin-left: 0px;
+      float: left;
+    }
+
+    &--edit{
+      color: $blackFont;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 12.5px 20px;
+      margin: 28px 40px 0;
+      border: 1px solid $blueColor;
+      float: right;
+    }
+  }
+}
+

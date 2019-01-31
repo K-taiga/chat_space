@@ -1,9 +1,15 @@
-.chatspace
-  .chatspace-side
-    =render partial: 'shared/sidebar'
+.chatspace-side
+  =render partial: 'shared/sidebar'
 
-  .chat-main
-    .chat-main__header
+.chat-main
+  .chat-main__header
+    .chat-main__header--group.clearfix
+      .chat-main__header--group--name
+        =@group
+    =link_to "Edit", "#",class: 'chat-main__header--group--edit'
+  .chat-main__body
+
+  .chat-main__footer
 
 
 
