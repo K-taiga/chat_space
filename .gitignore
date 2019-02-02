@@ -17,4 +17,4 @@
 .byebug_history
 public/uploads/*
 
-app/views/layouts/.DS_Store
+.DS_Store
