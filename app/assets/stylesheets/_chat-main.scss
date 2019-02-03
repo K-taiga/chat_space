@@ -44,10 +44,7 @@
       &--message{
         float:left;
         padding: 20px 0;
-        &--member{
-        margin-bottom: 10px;
-        line-height: 20px;
-        }
+
         &--user{
           @include user-name;
           color : $user_or_content_color;
