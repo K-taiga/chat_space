@@ -7,9 +7,19 @@
       .chat-main__header--group--name
         =@group
     =link_to "Edit", "#",class: 'chat-main__header--group--edit'
+
   .chat-main__body
+    .chat-main__body--messages
+      .chat-main__body--messages--message.clearfix
+        .chat-main__body--messages--message--user
+          =@user
+        .chat-main__body--messages--message--date
+          =@time
+        .chat-main__body--messages--message--content
+          =@message
 
   .chat-main__footer
+  = form_for(@message,'#', html: {method: 'GET'})
 
 
 
