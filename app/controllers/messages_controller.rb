@@ -4,5 +4,6 @@ class MessagesController < ApplicationController
     @group ="Sample"
     @time = "2019/2/3 15:00"
     @message = "こんにちは"
+    @member ="MEMBER:#{@user}"
   end
 end
