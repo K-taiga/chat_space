@@ -6,10 +6,32 @@
     .chat-main__header--group.clearfix
       .chat-main__header--group--name
         =@group
+      .chat-main__header--group--user
+        =@member
     =link_to "Edit", "#",class: 'chat-main__header--group--edit'
+
   .chat-main__body
+    .chat-main__body--messages
+      .chat-main__body--messages--message.clearfix
+        .chat-main__body--messages--message--user
+          =@user
+        .chat-main__body--messages--message--date
+          =@time
+        .chat-main__body--messages--message--content
+          =@message
+
+
 
   .chat-main__footer
+    = form_for @message,  html: {class: 'chat-main__footer-form'} do |f|
+      .chat-main__footer-body
+        = f.text_field :content, class: 'chat-main__footer-body-message', placeholder: 'type a message'
+        .chat-main__footer-file
+          %i.far.fa-image.fa-2x
+        =f.submit "Send"
+
+
+
 
 
 

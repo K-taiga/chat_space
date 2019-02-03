@@ -3,3 +3,9 @@ $lightBlue: #38aef0;
 $sidebarColor: #2f3e51;
 $blackFont: #333333;
 $blueColor: #38AEF0;
+$body-background-color: #AAAAAA;
+@mixin user-name{
+  font-size: 16px;
+  font-weight: bold;
+}
+$user_or_content_color: #434A54;

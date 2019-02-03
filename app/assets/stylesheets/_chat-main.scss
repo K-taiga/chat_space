@@ -3,36 +3,102 @@
   width: calc(100vw - 300px);
   float:left;
 
-&__header{
-  height: 15vh;
-  border:1px solid #eee;
+  &__header{
+    height: 15vh;
+    border:1px solid #eee;
 
-  &--group{
-    margin:0 40px;
-    float: left;
-
-    &--name{
-      color:$blackFont;
-      font-size: 20px;
-      margin-top: 35px;
-      margin-right: 0px;
-      margin-bottom: 15px;
-      margin-left: 0px;
+    &--group{
+      margin:0 40px;
       float: left;
-    }
 
-    &--edit{
-      color: $blackFont;
-      font-size: 15px;
-      text-decoration: none;
-      padding: 12.5px 20px;
-      margin: 28px 40px 0;
-      border: 1px solid $blueColor;
-      float: right;
+      &--name{
+        color:$blackFont;
+        font-size: 20px;
+        margin: 35px 0 15px;
+        float: left;
+      }
+      &--user{
+      padding-bottom: 6px;
+      font-size: 12px;
+      color: #999999;
+      }
+      &--edit{
+        color: $blackFont;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 12.5px 20px;
+        margin: 28px 40px 0;
+        border: 1px solid $blueColor;
+        float: right;
+      }
+    }
+  }
+
+  &__body{
+    height:calc(100vh - 15% - 90px);
+    overflow: scroll;
+
+    &--messages{
+      padding-left: 40px;
+      padding-top: 46px;
+      &--message{
+        float:left;
+        padding: 20px 0;
+
+        &--user{
+          @include user-name;
+          color : $user_or_content_color;
+          float : left;
+        }
+        &--date{
+          color : #999999;
+          font-size : 12px;
+          float : left;
+          padding-left: 10px;
+          padding-bottom: 10px;
+        }
+        &--content{
+          color: $user_or_content_color;
+          clear: both;
+        }
+      }
+    }
+  }
+
+  &__footer{
+    height: 90px;
+    width: 100%;
+    background-color: #ddd;
+    &-form{
+      margin: 0 40px;
+      position: relative;
+    }
+    &-body{
+      position: relative;
+      &-message{
+        background-color: #ffffff;
+        width: calc( 100% - 130px );
+        padding: 15px 10px;
+        margin: 20px 0;
+        border: none;
+      }
+    }
+    &-file{
+      margin: 32px 130px 20px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
 
-
+input[type=submit]{
+  color: $whiteFont;
+  background-color: $blueColor;
+  width: 100px;
+  line-height: 50px;
 }
 
+.fa-image:before{
+  content: "\f03e";
+}
