@@ -67,9 +67,36 @@
     height: 90px;
     width: 100%;
     background-color: #ddd;
-    &--form{
-
+    &-form{
+      margin: 0 40px;
+      position: relative;
+    }
+    &-body{
+      position: relative;
+      &-message{
+        background-color: #ffffff;
+        width: calc( 100% - 130px );
+        padding: 15px 10px;
+        margin: 20px 0;
+        border: none;
+      }
+    }
+    &-file{
+      margin: 32px 130px 20px 0;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
 
+input[type=submit]{
+  color: $whiteFont;
+  background-color: $blueColor;
+  width: 100px;
+  line-height: 50px;
+}
+
+.fa-image:before{
+  content: "\f03e";
+}

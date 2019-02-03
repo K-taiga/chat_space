@@ -18,8 +18,18 @@
         .chat-main__body--messages--message--content
           =@message
 
+
+
   .chat-main__footer
-  = form_for(@message,'#', html: {method: 'GET'})
+    = form_for @message,  html: {class: 'chat-main__footer-form'} do |f|
+      .chat-main__footer-body
+        = f.text_field :content, class: 'chat-main__footer-body-message', placeholder: 'type a message'
+        .chat-main__footer-file
+          %i.far.fa-image.fa-2x
+        =f.submit "Send"
+
+
+
 
 
 
