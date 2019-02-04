@@ -1,4 +1,5 @@
 @import "./reset";
-@import "./variables";
-@import "./side-bar";
-@import "./chat-main";
+@import "./modules/variables";
+@import "./modules/side-bar";
+@import "./modules/chat-main";
+@import "./user";
