@@ -6,4 +6,7 @@ class MessagesController < ApplicationController
     @message = "こんにちは"
     @member ="MEMBER:#{@user}"
   end
+
+  def create
+  end
 end
