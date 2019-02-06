@@ -8,5 +8,11 @@
       =link_to edit_user_path(current_user), class: 'chat-side__user__edit-user' do
         %i.fa.fa-cog
 
-.groups
-
+  .groups
+    .group
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .group__name
+            =group.name
+          .group__message
+            メッセージはまだありません。

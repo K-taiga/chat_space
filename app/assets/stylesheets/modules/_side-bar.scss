@@ -21,7 +21,7 @@
    bottom: 0;
   }
   &__name{
-    color:$whiteFont;
+    color:$white;
     @include user-name;
     margin: 0 20px;
     position: relative;
@@ -37,23 +37,45 @@
     display: inline-block;
     margin-left: 10px;
   }
-}
 
-
-a{
-  color: $whiteFont;
+  a{
+  color: $white;
 
   &:hover{
     color: $lightBlue;
   }
 
+  }
+
 }
+
+
 
 .fa-edit:before, .fa-pencil-square-o:before {
      content: "\f044";
  }
 
-.groups{
-  height: 85%;
-  width: 100%;
+ .groups {
+  background-color: $sidebarColor;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  .group {
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name {
+      color: $white;
+      font-size: 15px;
+    }
+    &__message {
+      color: $white;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  }
+  a {
+    &:hover{
+    color: $lightBlue;
+    }
+  }
 }
+
