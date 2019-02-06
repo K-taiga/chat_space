@@ -2,7 +2,7 @@
 
 ## DB構成
 
-## membersテーブル
+## group_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|

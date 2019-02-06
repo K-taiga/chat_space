@@ -3,24 +3,16 @@
     .chat-side__user__content
       .chat-side__user__name
         = current_user.name
-      =link_to "#", class: 'chat-side__user__new-group' do
+      =link_to new_group_path, class: 'chat-side__user__new-group' do
         %i.fa.fa-pencil-square-o
       =link_to edit_user_path(current_user), class: 'chat-side__user__edit-user' do
         %i.fa.fa-cog
 
-.groups
-  .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+  .groups
     .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .group__name
+            =group.name
+          .group__message
+            メッセージはまだありません。
