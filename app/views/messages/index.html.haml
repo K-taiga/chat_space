@@ -5,9 +5,9 @@
   .chat-main__header
     .chat-main__header--group.clearfix
       .chat-main__header--group--name
-        =@group
+        =@group.name
       .chat-main__header--group--user
-        =@member
+        = "Member: #{current_user.name}"
     =link_to "Edit", "#",class: 'chat-main__header--group--edit'
 
   .chat-main__body
