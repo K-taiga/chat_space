@@ -7,7 +7,9 @@
       .chat-main__header--group--name
         =@group.name
       .chat-main__header--group--user
-        = "Member: #{current_user.name}"
+        Members:
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     =link_to "Edit", "#",class: 'chat-main__header--group--edit'
 
   .chat-main__body
