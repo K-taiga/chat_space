@@ -5,25 +5,18 @@
   .chat-main__header
     .chat-main__header--group.clearfix
       .chat-main__header--group--name
-        =@group
+        =@group.name
       .chat-main__header--group--user
-        =@member
+        Members:
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     =link_to "Edit", "#",class: 'chat-main__header--group--edit'
 
   .chat-main__body
-    .chat-main__body--messages
-      .chat-main__body--messages--message.clearfix
-        .chat-main__body--messages--message--user
-          =@user
-        .chat-main__body--messages--message--date
-          =@time
-        .chat-main__body--messages--message--content
-          =@message
-
-
+    = render partial: 'shared/message', collection: @messages
 
   .chat-main__footer
-    = form_for @message,  html: {class: 'chat-main__footer-form'} do |f|
+    = form_for [@group, @message],  html: {class: 'chat-main__footer-form'} do |f|
       .chat-main__footer-body
         = f.text_field :content, class: 'chat-main__footer-body-message', placeholder: 'type a message'
         .chat-main__footer-file
