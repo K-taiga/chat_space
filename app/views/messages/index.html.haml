@@ -10,7 +10,7 @@
         Members:
         - @group.group_users.each do |group_user|
           = group_user.user.name
-    =link_to "Edit", "#",class: 'chat-main__header--group--edit'
+    =link_to "Edit", edit_group_path(@group),class: 'chat-main__header--group--edit'
 
   .chat-main__body
     = render partial: 'shared/message', collection: @messages
