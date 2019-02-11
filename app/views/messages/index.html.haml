@@ -10,7 +10,7 @@
         Members:
         - @group.group_users.each do |group_user|
           = group_user.user.name
-    =link_to "Edit", "#",class: 'chat-main__header--group--edit'
+    =link_to "Edit", edit_group_path(@group),class: 'chat-main__header--group--edit'
 
   .chat-main__body
     = render partial: 'shared/message', collection: @messages
@@ -21,6 +21,7 @@
         = f.text_field :content, class: 'chat-main__footer-body-message', placeholder: 'type a message'
         .chat-main__footer-file
           %i.far.fa-image.fa-2x
+          =f.file_field :image, class: "image", style: "display:none;"
         =f.submit "Send"
 
 
