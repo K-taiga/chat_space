@@ -20,8 +20,9 @@
       .chat-main__footer-body
         = f.text_field :content, class: 'chat-main__footer-body-message', placeholder: 'type a message'
         .chat-main__footer-file
-          %i.far.fa-image.fa-2x
-          =f.file_field :image, class: "image", style: "display:none;"
+          = f.label :image, class: 'form__mask__image' do
+            %i.far.fa-image.fa-2x
+            =f.file_field :image, class: "image", style: "display:none;"
         =f.submit "Send"
 
 
