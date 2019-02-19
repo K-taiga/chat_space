@@ -15,7 +15,6 @@ $(function() {
                     ${image}
                   </p>
                 </div>`
-    console.log(html);
     return html;
   }
   $('#new_message').on('submit', function(e){
@@ -31,7 +30,6 @@ $(function() {
         contentType: false
       })
       .done(function(data){
-        console.log(data);
         var html = buildHTML(data);
         $('.chat-main__body').append(html);
         $(".chat-main__body").animate({scrollTop:$('.chat_main-body')});
