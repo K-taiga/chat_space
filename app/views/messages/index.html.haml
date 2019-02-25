@@ -9,8 +9,8 @@
       %ul.chat-main__header--group--user
         Members:
         - @group.users.each do |user|
-          %li.chat-main__header--group--user-member
-          = user.name
+          %li.chat-main__header--group--user-member= user.name
+
     =link_to "Edit", edit_group_path(@group),class: 'chat-main__header--group--edit'
 
   .chat-main__body
