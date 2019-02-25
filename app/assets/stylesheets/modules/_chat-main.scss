@@ -18,9 +18,14 @@
         float: left;
       }
       &--user{
-      padding-bottom: 6px;
+      color: #999;
+      display: flex;
       font-size: 12px;
-      color: #999999;
+      margin-top: 80px;
+        &-member{
+          display: inline-block;
+          padding-right: 5px;
+        }
       }
       &--edit{
         color: $black;
