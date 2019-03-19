@@ -41,7 +41,7 @@ $(function() {
       })
     })
 
-  var auto_reload = setInterval( function() {
+  var auto_reload = setInterval(function() {
     if (location.href.match(/\/groups\/\d+\/messages/)){
       var url = $(location).attr('pathname');
       var message_id = $('.message').last().data('id');
@@ -63,7 +63,7 @@ $(function() {
         });
       } else {
         clearInterval(interval);
-    },
-      }5000 );
+        }
+    },5000 );
 });
 
